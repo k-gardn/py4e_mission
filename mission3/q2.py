@@ -17,7 +17,7 @@ def convertInput(inputData):
 
 
 def rsp_advanced(games):
-
+    for i in range(1, games + 1):
         inputData = input("가위 바위 보: ")
         my = convertInput(inputData)
         while my == 3:
@@ -40,8 +40,7 @@ def rsp_advanced(games):
 
 try:
     games = int(input("몇 판을 진행하시겠습니까? : "))
-    for i in range(1, games + 1):
-        rsp_advanced(games)
+    rsp_advanced(games)
 except:
     print('오류입니다. 숫자만 입력해주세요!')
 
